@@ -1,0 +1,15 @@
+syntax = "proto3";
+package ws_test;
+
+option go_package = "/ws_test";
+
+service WSTest {
+  rpc GetUserBalance (GetUserBalanceRequest) returns (GetUserBalanceResponse) {}
+}
+
+message GetUserBalanceRequest {
+  int64 userId = 1;
+}
+message GetUserBalanceResponse {
+  string value = 1;
+}
